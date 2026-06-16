@@ -46,7 +46,17 @@ Real-time notifications
 Mobile application support
 Role-based access control
 Data export and sharing features
+
+## Live Demo
+
+Frontend:
+https://track-smart-nine.vercel.app
+
+Backend API:
+https://tracksmart-production-5ef6.up.railway.app
+
 👨‍💻 Author
 Abhishek Rao
 
 GitHub: https://github.com/Abhishekrao123-tech
+
