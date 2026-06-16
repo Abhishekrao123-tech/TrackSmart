@@ -91,11 +91,14 @@ async function loadFromDatabase() {
     return;
   }
 
-  const response = await fetch("http://localhost:5000/api/transactions", {
-    headers: {
-      Authorization: token,
+  const response = await fetch(
+    "https://tracksmart-production-5ef6.up.railway.app/api/transactions",
+    {
+      headers: {
+        Authorization: token,
+      },
     },
-  });
+  );
 
   const data = await response.json();
   console.log("Fetched from API:", data.length);
@@ -270,7 +273,7 @@ function addRow(t, save = true) {
     const token = localStorage.getItem("token");
 
     const response = await fetch(
-      `http://localhost:5000/api/transactions/${t.id}`,
+      `https://tracksmart-production-5ef6.up.railway.app/api/transactions/${t.id}`,
       {
         method: "DELETE",
         headers: {
@@ -319,20 +322,23 @@ if (addBtn) {
 
     const token = localStorage.getItem("token");
 
-    await fetch("http://localhost:5000/api/transactions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: token,
+    await fetch(
+      "https://tracksmart-production-5ef6.up.railway.app/api/transactions",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: token,
+        },
+        body: JSON.stringify({
+          type: t.type,
+          description: t.desc,
+          category: t.category,
+          amount: t.amount,
+          transaction_date: new Date().toISOString().split("T")[0],
+        }),
       },
-      body: JSON.stringify({
-        type: t.type,
-        description: t.desc,
-        category: t.category,
-        amount: t.amount,
-        transaction_date: new Date().toISOString().split("T")[0],
-      }),
-    });
+    );
 
     await loadFromDatabase();
 
