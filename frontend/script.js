@@ -344,5 +344,10 @@ if (addBtn) {
 
     if (modal) modal.style.display = "none";
   };
+}const token = localStorage.getItem("token");
+
+if (!token) {
+    window.location.href = "login.html";
 }
+
 loadFromDatabase();
