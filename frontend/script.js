@@ -340,8 +340,15 @@ if (addBtn) {
       },
     );
 
-    await loadFromDatabase();
+        await loadFromDatabase();
 
-   
+    if (modal) {
+      modal.style.display = "none";
+    }
+
+    document.getElementById("desc").value = "";
+    document.getElementById("amount").value = "";
+  };
+}
 
 loadFromDatabase();
