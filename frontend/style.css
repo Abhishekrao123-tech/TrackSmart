@@ -378,13 +378,11 @@ select option[disabled] {
   cursor: pointer;
   transition: all 0.2s ease;
 }
-
 .delete-btn:hover {
   background: rgba(239, 68, 68, 0.12);
   border-color: var(--red);
   color: var(--red);
 }
-
 .delete-btn:active {
   transform: scale(0.97);
 }
