@@ -369,4 +369,22 @@ select option[disabled] {
 #profileModal {
   color: #000;
 }
+.delete-btn {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border-main);
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
 
+.delete-btn:hover {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.delete-btn:active {
+  transform: scale(0.97);
+}
