@@ -111,7 +111,7 @@ node server.js
 
 ## 🔮 Future Improvements
 
-* Update Transactions
+* Update Transaction
 * Search & Filter Transactions
 * Export Reports
 * Budget Planning
