@@ -102,7 +102,7 @@ TrackSmart/
 git clone https://github.com/Abhishekrao123-tech/TrackSmart.git 
 cd TrackSmart
 ```
-
+And 
 ```bash
 cd backend
 npm install
